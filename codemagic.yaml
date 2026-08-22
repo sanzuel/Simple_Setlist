@@ -8,7 +8,7 @@ workflows:
       vars:
         PACKAGE_NAME: "com.songsetlist.app"
       android_signing:
-        - songsetlist_keystore
+        - Sanzuel
     scripts:
       - name: Build release APK
         script: |
