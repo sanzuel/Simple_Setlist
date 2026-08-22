@@ -1,18 +1,17 @@
 workflows:
   android-release:
-    name: SongSetlist Android Release
+    name: Simple_Setlist Android Release
     max_build_duration: 30
+
     environment:
       groups:
         - keystore_credentials
-      vars:
-        PACKAGE_NAME: "com.songsetlist.app"
-      android_signing:
-        - Sanzuel
+
     scripts:
       - name: Build release APK
         script: |
           chmod +x gradlew
           ./gradlew assembleRelease
+
     artifacts:
-      - app/build/outputs/apk/release/app-release.apk
+      - app/build/outputs/apk/release/*.apk
